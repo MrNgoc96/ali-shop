@@ -1,0 +1,9 @@
+.boxCenter{height:600px;}
+.boxLogin{height:100%;width:50%;float:left;display: table; vertical-align: middle;}
+.boxRegister{height:100%;width:50%;float: left;background:#EEEEEE}
+.boxLogin .box1{width:65%;height:90%;float: none;display: block; margin-left: auto;  margin-right: auto;}
+.boxRegister .box2{width:65%;height:90%;float: none;display: block; margin-left: auto;  margin-right: auto;}
+.vertical-center-row { display: table-cell; vertical-align: middle;}
+body { padding-top: 0px;}
+.form-control {margin-bottom: 10px;}
+.btnRegister{width:100%;height:10%;text-align:center;}

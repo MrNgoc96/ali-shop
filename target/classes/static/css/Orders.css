@@ -1,0 +1,26 @@
+.order{
+    padding: 30px 0;
+}
+.order span{
+    font-weight: bold;
+    text-transform: uppercase;
+   
+}
+.title {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.order input{
+    line-height: 2;
+    width: 375px;
+}
+.order select{
+    height: 31px;
+    width: 168px;
+}
+.btn success{
+    padding: 0 5px;
+    height: 32px;
+}

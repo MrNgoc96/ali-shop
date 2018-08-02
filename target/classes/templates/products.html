@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+          crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" th:href="@{/images/logo.png}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/productsp.css}">
+    <link rel="stylesheet" th:href="@{/css/Style.css}">
+    <title>Ali Shop</title>
+</head>
+<body>
+<div class="wapper">
+    <header th:replace="common::header"></header>
+    <div th:replace="common::cart"></div>
+    <div th:replace="common::menu"></div>
+    <img style="width: 100%" src="images/1240x50.png" alt="qc">
+    <br>
+    <div class="searchProduct">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-1">
+                    <span>Tìm theo :</span>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <select class="form-control" id="scope-price">
+                        <option th:each="item : ${listScopePrice}" th:value="${item.key}" th:text="${item.value}"
+                                th:selected="(${#strings.equals(item.key,param.scopePrice)} ? true : false)">Lọc sản
+                            phẩm theo giá
+                        </option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <select class="form-control">
+                        <option value="volvo">Sắp xếp sản phẩm</option>
+                        <option value="saab">Sản phẩm từ cao đến thấp</option>
+                        <option value="saab">Sản phẩm từ Thấp đến cao</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <input type="text" class="form-control" name="key">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+
+                    <button type="button" class="btn btn-success">Tìm kiếm</button>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="SlideThumail">
+        <div class="container text-center">
+            <div class="row">
+                <h5 class="k">
+                    <p></p>
+                    <a href="">Danh sách sản phẩm </a>
+                </h5>
+                <div th:each="product,i : ${products}">
+                    <div th:insert="common::product" th:if="${i.index < 4}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SlideThumail">
+        <div class="container text-center">
+            <div class="row">
+                <div th:each="product,i : ${products}">
+                    <div th:insert="common::product" th:if="${i.index > 3 &&i.index < 8}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SlideThumail">
+        <div class="container text-center">
+            <div class="row">
+                <div th:each="product,i : ${products}">
+                    <div th:insert="common::product" th:if="${i.index > 7 &&i.index < 12}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div th:insert="common::pagging"></div>-->
+    <footer th:replace="common::footer"></footer>
+    <script th:src="@{/js/cart.js}"></script>
+    <script th:src="@{/js/product.js}"></script>
+</div>
+</body>
+</html>

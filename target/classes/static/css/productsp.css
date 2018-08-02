@@ -1,0 +1,10 @@
+.searchProduct{
+    padding: 30px 0;
+}
+.searchProduct input{
+    line-height: 2;
+    width: 353px;
+}
+.searchProduct select{
+    height: 32px;
+}

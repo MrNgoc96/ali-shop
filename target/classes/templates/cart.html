@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+          crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" th:href="@{/images/logo.png}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/cart.css}">
+    <link rel="stylesheet" th:href="@{/css/Style.css}">
+    <title>Ali Shop</title>
+</head>
+<body>
+<div class="wapper">
+    <header th:replace="common::header"></header>
+    <div th:replace="common::menu"></div>
+    <div class="cartProduct" style="min-width: 600px;min-height: 500px;">
+        <h1 style="font-weight: bold;color: #2b669a;" class="text-center">Giỏ hàng</h1>
+        <div class="container">
+            <table class="table table-hover table-condensed" th:if="${session.cartBean != null}">
+                <thead>
+                <tr>
+                    <th style="width:50%">Tên sản phẩm</th>
+                    <th style="width:10%">Giá</th>
+                    <th style="width:8%">Số lượng</th>
+                    <th style="width:22%" class="text-center">Thành tiền</th>
+                    <th style="width:10%"></th>
+                </tr>
+                </thead>
+                <tbody id="cart-items">
+                <tr th:each="item : ${session.cartBean}">
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img th:src="${item.value.product.image}" alt="Sản phẩm 1"
+                                                                 class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin" th:text="${item.value.product.name}">Vest Nam</h4>
+                                <!--<p>Vest nữ Hàn Quốc</p>-->
+                            </div>
+                        </div>
+                    </td>
+                    <td th:text="${#numbers.formatDecimal(item.value.product.price,0,'COMMA', 0,'POINT')}+ ' đ'">200.000
+                        đ
+                    </td>
+                    <td><input class="form-control text-center" th:id="quantity-product+${item.value.product.id}"
+                               min="0" max="5" th:onchange="'updateQuantity('+${item.value.product.id}+')'"
+                               th:value="${item.value.quantity}" type="number">
+                    </td>
+                    <td data-th="Subtotal" class="text-center"
+                        th:text="${#numbers.formatDecimal((item.value.product.price * item.value.quantity),0,'COMMA', 0,'POINT')}+ ' đ'">
+                        200.000 đ
+                    </td>
+                    <td class="actions" data-th="">
+                        <button th:onclick="'removeProduct('+${item.value.product.id}+')'"
+                                class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a th:href="@{/products}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua
+                        hàng</a>
+                    </td>
+                    <td colspan="2" class="hidden-xs"></td>
+                    <td class="hidden-xs text-center"><strong
+                            th:text="${'Tổng tiền '+ #numbers.formatDecimal(session.cartBean.totalPrice,0,'COMMA', 0,'POINT') + ' đ'}">Tổng
+                        tiền 500.000 đ</strong>
+                    </td>
+                    <td><a href="" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+            <div class="cart-empty" th:if="${session.cartBean == null}" style="text-align: center;margin: auto">
+                <h3>Giỏ hàng của bạn đang rỗng, mua sắm ngay thôi nào !</h3>
+                <a th:href="@{/products}" class="btn btn-lg btn-primary">Mua ngay</a></br>
+                <img src="https://gearvita.com/pub/media/wysiwyg/emptycart.png" width="70%">
+            </div>
+        </div>
+    </div>
+    <footer th:replace="common::footer"></footer>
+    <script th:src="@{/js/cart.js}"></script>
+</div>
+</body>
+</html>

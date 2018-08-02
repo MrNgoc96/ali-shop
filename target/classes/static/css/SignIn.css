@@ -1,0 +1,23 @@
+
+body {  
+    padding-top: 0px;
+    }
+ 
+    .login-screen-bg {  
+    background-color: #EFEFEF;
+    }
+.btn-primary{
+    margin: 28px 550px;
+    background-color: #008e90;
+    border: none;
+}
+.Signin{
+    padding: 30px 0;
+    
+}
+.formsignin{
+   
+}
+.well-sm{
+    margin: 0;
+}
