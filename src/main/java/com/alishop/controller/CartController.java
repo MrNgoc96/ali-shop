@@ -40,11 +40,6 @@ public class CartController {
         return "index";
     }
 
-    @GetMapping("/payment")
-    public String payment() {
-        return "payment";
-    }
-
     @GetMapping("/remove-product")
     public String removeProduct(@RequestParam int productId, HttpSession session) {
         CartBean cartBean = (CartBean) session.getAttribute("cartBean");

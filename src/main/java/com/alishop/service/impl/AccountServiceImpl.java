@@ -46,6 +46,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public boolean saveAccount(AccountDTO accountDTO) {
+        accountDTO.setPassword(BaseUtils.encryptPassword(accountDTO.getPassword()));
         Account account = transformUtils.transformReverse(accountDTO, Account.class);
         return accountRepository.save(account) != null;
     }

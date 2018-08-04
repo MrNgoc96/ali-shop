@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+          crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" th:href="@{/images/logo.png}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/pay.css}">
+    <link rel="stylesheet" th:href="@{/css/Style.css}">
+    <link rel="stylesheet" th:href="@{/css/dialog-utils.css}" />
+    <title>Ali Shop</title>
+</head>
+<body>
+<div class="wapper">
+    <header th:replace="common::header"></header>
+    <div th:replace="common::menu"></div>
+    <div class="pay">
+        <div class="container">
+            <div class="row" style="min-height:600px">
+
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                    <div class="Paytitle">
+                        <h3>Thông tin giỏ hàng</h3>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col" >Ảnh</th>
+                            <th scope="col" colspan="2">Tên Sản phẩm</th>
+                            <th scope="col">Đơn giá</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Thành tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr style="text-align:center" th:each="item : ${session.cartBean}">
+                            <td style="max-width:50px;max-height:50px"><img th:src="${item.value.product.image}" width="100%"alt="images"></td>
+                            <td colspan="2" style="vertical-align:middle" th:text="${item.value.product.name}">Áo thun adidas</td>
+                            <td style="vertical-align:middle" th:text="${item.value.product.price}">500,000 đồng</td>
+                            <td data-th="Quantity" style="vertical-align:middle" th:text="${item.value.quantity}">
+                                2
+                            </td>
+                            <td style="vertical-align:middle" th:text="${#numbers.formatDecimal(item.value.product.price * item.value.quantity,0,'COMMA', 0,'POINT')}+ ' đ'">1,000,000 đồng</td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="3">Phí vận chuyển</td>
+                            <td colspan="3" style="text-align:right">20,000 đ</td>
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="3" style="font-weight:bold">Tổng tiền</td>
+                            <td colspan="3" class="price" style="text-align:right" th:text="${#numbers.formatDecimal(session.cartBean.totalPrice + 20000,0,'COMMA', 0,'POINT')}+ ' đ'" >1,020,000 đồng</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                    <div class="Paytitle">
+                        <h3>Thông tin người đặt</h3>
+
+                        <div class="infouser row ">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                </legend>
+                                <form action="" method="post" class="form" role="form">
+
+                                    <div>
+                                        <input class="form-control" name="firstname" placeholder="Họ Tên" required="" autofocus=""
+                                               type="text">
+                                    </div>
+                                    <div>
+                                        <input class="form-control" name="lastname" placeholder="Điện thoại" required="" type="text">
+                                    </div>
+                                    <div>
+                                        <input class="form-control" name="lastname" placeholder="Email" required="" type="text">
+                                    </div>
+
+                                    <div>
+                                        <textarea class="form-control" name="lastname" placeholder="Địa chỉ" required="" type="text"></textarea>
+                                    </div>
+
+                                    <br>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Đặt hàng</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer th:replace="common::footer"></footer>
+    <script th:src="@{/js/cart.js}"></script>
+</div>
+</body>
+</html>

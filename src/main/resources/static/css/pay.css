@@ -1,0 +1,40 @@
+.Paytitle{
+
+   
+}
+.Paytitle h3{
+    padding: 10px 3px;
+    background-color: #008e90;
+    color: #FFFFFF;
+}
+.form-control{
+    width: 70px;
+}
+.price{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.infouser .form-control{
+    margin: 10px 0;
+    line-height: 2;
+    width: 100%;
+    
+}
+body {  
+    padding-top: 0px;
+    }
+    .form-control { 
+    margin-bottom: 10px;
+    }
+    .login-screen-bg {  
+    background-color: #EFEFEF;
+    }
+    select{
+        width: 100%;
+        height: 36px;
+    }
+    .btn-block{
+        background-color: #008e90;
+        margin-bottom: 10px;
+    }

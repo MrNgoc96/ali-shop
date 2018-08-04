@@ -3,7 +3,6 @@ package com.alishop.controller;
 
 import com.alishop.dto.AccountDTO;
 import com.alishop.entity.Account;
-import com.alishop.repository.AccountRepository;
 import com.alishop.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,9 +45,9 @@ public class LoginController {
         if(accountService.saveAccount(account)){
             model.addAttribute("message","Chúc mừng bạn đã đăng ký thành công !");
         }else{
-
+            model.addAttribute("message","Đăng ký thất bại, bạn vui lòng thử lại !");
         }
-
+        return "login";
     }
 
 }

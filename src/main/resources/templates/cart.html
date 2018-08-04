@@ -13,6 +13,7 @@
     <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/css/cart.css}">
     <link rel="stylesheet" th:href="@{/css/Style.css}">
+    <link rel="stylesheet" th:href="@{/css/dialog-utils.css}" />
     <title>Ali Shop</title>
 </head>
 <body>
@@ -71,7 +72,7 @@
                             th:text="${'Tổng tiền '+ #numbers.formatDecimal(session.cartBean.totalPrice,0,'COMMA', 0,'POINT') + ' đ'}">Tổng
                         tiền 500.000 đ</strong>
                     </td>
-                    <td><a href="" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+                    <td><a th:href="@{/payment}" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
                     </td>
                 </tr>
                 </tfoot>
