@@ -1,4 +1,4 @@
-package com.alishop.entity;
+package com.alishop.cartbean;
 
 
 import java.util.HashMap;

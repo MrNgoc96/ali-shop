@@ -2,9 +2,8 @@ package com.alishop.controller;
 
 
 import com.alishop.dto.ProductDTO;
-import com.alishop.entity.CartBean;
-import com.alishop.entity.Product;
-import com.alishop.entity.ProductPTO;
+import com.alishop.cartbean.CartBean;
+import com.alishop.cartbean.ProductPTO;
 import com.alishop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +29,7 @@ public class CartController {
 
     @GetMapping("/add-to-cart")
     public String addToCart(@RequestParam int productId, @RequestParam(defaultValue = "1") int quantity, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
         if (cartBean == null) {
             cartBean = new CartBean();
         }
@@ -42,7 +41,7 @@ public class CartController {
 
     @GetMapping("/remove-product")
     public String removeProduct(@RequestParam int productId, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
         if (cartBean != null) {
             cartBean.removeProduct(productId);
             session.setAttribute("cartBean", cartBean);
@@ -52,7 +51,7 @@ public class CartController {
 
     @GetMapping("/update-quantity")
     public String updateQuantity(@RequestParam int productId, @RequestParam int quantity, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
         ProductPTO productPTO = cartBean.get(productId);
         if (productPTO == null) {
             return CART_VIEW_NAME;

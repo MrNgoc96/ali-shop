@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcff1489-4a8b-46b6-bf27-e247cc474b3e" name="Default" comment="">
+    <list default="true" id="bcff1489-4a8b-46b6-bf27-e247cc474b3e" name="Default" comment="Ngọc commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/dto/CategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDetailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alishop/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/entity/CartBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/cartbean/CartBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/entity/ProductPTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/cartbean/ProductPTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alishop/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alishop/service/impl/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/entity/CartBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/entity/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alishop/entity/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/entity/ProductPTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alishop/repository/OrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/alishop/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alishop/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/products.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,11 +46,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="products.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/products.html">
+      <file leaf-file-name="OrderDetailRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderDetailRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="145">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDetailDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDetailDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/OrderDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1131">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/OrderService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/OrderServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1073">
+              <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/ProductDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/CategoryDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="e#130#131#0" expanded="true" />
+                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#191#192#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,8 +158,8 @@
       <list>
         <option value="Jsp File" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,15 +169,20 @@
       <find>ProductDAO</find>
       <find>.fo</find>
       <find>pasword</find>
+      <find>Account</find>
     </findStrings>
     <replaceStrings>
       <replace>th:src=&quot;@{/images</replace>
       <replace>ProductService</replace>
       <replace>password</replace>
+      <replace>Order</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/templates/common.html" root0="SKIP_INSPECTION" />
@@ -75,16 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/common/menu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/common/slide.jsp" />
-        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/common.html" />
-        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/index.html" />
-        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/entity/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/entity/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/cart.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/dto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/bases/TranformUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/entity/ProductPTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/dto/ProductDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/bases/TranFormUtils.java" />
@@ -101,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/product.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/service/impl/ProductServiceImpl.java" />
@@ -116,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/service/impl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/main.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/dialog.-utils.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/dialog-utils.js" />
@@ -126,6 +234,18 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/payment.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/product.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/products.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderDetailRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/cartbean/CartBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/dto/CategoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/repository/CategoryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/entity/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDetailDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java" />
       </list>
     </option>
   </component>
@@ -171,9 +291,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="width" value="1680" />
-    <option name="height" value="1018" />
+    <option name="x" value="-10" />
+    <option name="width" value="1933" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -181,7 +301,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,8 +451,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,7 +469,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44904214" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.chrisrm.idea.config" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -361,8 +481,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.alishop.service" />
-      <recent name="com.alishop.entity" />
       <recent name="com.alishop.repository" />
+      <recent name="com.alishop.cartbean" />
+      <recent name="com.alishop.entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="A:\Java-Spring\ali-shop\src\main\resources" />
@@ -458,7 +579,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Acer\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -487,7 +608,9 @@
       <workItem from="1533169260468" duration="5605000" />
       <workItem from="1533178827143" duration="9407000" />
       <workItem from="1533263213647" duration="4566000" />
-      <workItem from="1533343072914" duration="5908000" />
+      <workItem from="1533343072914" duration="11636000" />
+      <workItem from="1533382121646" duration="1191000" />
+      <workItem from="1533432268589" duration="284000" />
     </task>
     <task id="LOCAL-00001" summary="Ngọc commit">
       <created>1533351719669</created>
@@ -496,50 +619,56 @@
       <option name="project" value="LOCAL" />
       <updated>1533351719669</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ngọc commit">
+      <created>1533351760535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533351760535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152847000" />
+    <option name="totallyTimeSpent" value="160050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1680" height="1018" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1546" height="831" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32885906" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3235639" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25908557" />
+      <window_info anchor="bottom" id="Spring" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.06666667" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26110363" />
+      <window_info anchor="bottom" id="Problems" order="12" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.25757575" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3293556" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24701671" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.39382717" />
-      <window_info anchor="bottom" id="Spring" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.06666667" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25185186" />
-      <window_info anchor="bottom" id="Problems" order="12" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32816228" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.25757575" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3270809" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.39382717" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
@@ -590,7 +719,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -598,59 +727,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/controller/CustomerController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/MailService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/GoogleService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/productsp.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="986">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1441">
-          <caret line="228" column="21" lean-forward="true" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/static/js/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Product.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-928">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/CartBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/SearchDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -679,20 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/ProductDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -700,34 +772,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/ProductPTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="133" column="48" lean-forward="true" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-377">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -765,13 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1961#1962#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2037#2038#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -807,16 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-319">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -831,9 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,25 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/pay.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,18 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -947,8 +937,156 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="-87">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/cartbean/CartBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/cartbean/ProductPTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/repository/OrderDetailRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/OrderDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/ProductDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/CategoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1131">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDetailDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/dto/OrderDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alishop/controller/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

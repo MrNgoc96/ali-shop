@@ -20,7 +20,7 @@ public interface ProductRepository extends JpaRepository<Product,Integer> {
     @Query(value = "SELECT p FROM Product p  WHERE p.name like %?1%")
     List<Product> searchProductByName(String name,Pageable pageable);
 
-    @Query(value = "SELECT p FROM Product p inner join p.category c WHERE c.id like ?1")
+    @Query(value = "SELECT p FROM Product p  inner join p.category c WHERE c.id like ?1")
     List<Product> searchProductByCategory(int categoryId,Pageable pageable);
 
     @Query(value = "SELECT p FROM Product p inner join p.category c WHERE c.name like '%nam' ")

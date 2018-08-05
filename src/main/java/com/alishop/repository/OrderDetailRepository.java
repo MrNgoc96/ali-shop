@@ -1,6 +1,6 @@
 package com.alishop.repository;
 
-import com.alishop.entity.Order;
+import com.alishop.entity.OrderDetail;
 import com.alishop.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -9,8 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order,Integer> {
+public interface OrderDetailRepository extends JpaRepository<OrderDetail,Integer> {
 
-    @Query(value = "SELECT o FROM Order o WHERE o.status like :status")
-    List<Product> searchProductByStatus(String status);
+
 }
