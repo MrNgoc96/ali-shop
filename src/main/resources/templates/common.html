@@ -233,6 +233,11 @@
     <script th:src="@{/js/jquery.js}"></script>
     <script th:src="@{/js/bootstrap.js}"></script>
     <script th:src="@{/js/dialog-utils.js}"></script>
+    <input type="hidden" id="message" th:value="${message}">
+    <script th:if="${!#strings.isEmpty(message)}">
+        let message = $('#message').val();
+        showPopup('Thông báo',message);
+    </script>
 </footer>
 
 <div th:fragment="product" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  >

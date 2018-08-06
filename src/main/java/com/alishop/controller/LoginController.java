@@ -42,7 +42,7 @@ public class LoginController {
 
     @PostMapping("register")
     public String register(@ModelAttribute AccountDTO account,Model model){
-        if(accountService.saveAccount(account)){
+        if(accountService.saveAccount(account) != null){
             model.addAttribute("message","Chúc mừng bạn đã đăng ký thành công !");
         }else{
             model.addAttribute("message","Đăng ký thất bại, bạn vui lòng thử lại !");

@@ -11,7 +11,7 @@ public interface AccountService {
 
     AccountDTO getAccount(String username);
 
-    boolean saveAccount(AccountDTO account);
+    AccountDTO saveAccount(AccountDTO account);
 
     boolean updateAccount(AccountDTO account,String username);
 

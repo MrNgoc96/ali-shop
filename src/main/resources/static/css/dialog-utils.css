@@ -1,22 +1,29 @@
 #popup {
-    position: fixed;
+    width:100%;
+    height:2000px;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
+    right: 0; bottom : 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 999999;
+    bottom: 0;
     display: none;
 }
 
 #popup-message {
-    width: 30%;
-    height:30%;
-    margin-left: 35%;
-    margin-top: 10%;
-    background: white;
-    position: relative;
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    top: 10%;
+    left: 38%;
+    margin: 100px auto 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    overflow: hidden;
     border-radius: 10px;
-    border: 2px groove blue;
+    border: 1px groove blue;
     background-image:
             url("https://i0.wp.com/globaltimecollection.com/updates/wp-content/uploads/2016/01/Savin-NY-Website-Background-Web.jpg?fit=1200%2C675");
     background-position: center;
@@ -36,7 +43,7 @@
 #popup-title {
     width: 100%;
     height: 20%;
-    background: #ff0000;
+    background: #008e90;
     border-radius: 10px 10px 0 0;
 }
 

@@ -19,7 +19,7 @@ public class Account {
     @Column(name="type_user")
     private String typeUser;
     private String email;
-    @OneToMany(mappedBy = "account",orphanRemoval = true)
+    @OneToMany(mappedBy = "account")
     private List<Order> orders;
 
     public Account() {

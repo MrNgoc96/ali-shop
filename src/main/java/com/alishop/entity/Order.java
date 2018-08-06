@@ -15,6 +15,7 @@ public class Order {
     private int id;
     @Column(name = "order_address")
     private String address;
+    @Column(name = "order_status")
     private String status;
     @Temporal(TemporalType.DATE)
     @Column(name = "order_date")

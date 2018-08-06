@@ -29,7 +29,7 @@ public class CartController {
 
     @GetMapping("/add-to-cart")
     public String addToCart(@RequestParam int productId, @RequestParam(defaultValue = "1") int quantity, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
         if (cartBean == null) {
             cartBean = new CartBean();
         }
@@ -41,7 +41,7 @@ public class CartController {
 
     @GetMapping("/remove-product")
     public String removeProduct(@RequestParam int productId, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
         if (cartBean != null) {
             cartBean.removeProduct(productId);
             session.setAttribute("cartBean", cartBean);
@@ -51,7 +51,7 @@ public class CartController {
 
     @GetMapping("/update-quantity")
     public String updateQuantity(@RequestParam int productId, @RequestParam int quantity, HttpSession session) {
-        CartBean cartBean = (CartBean) session.getAttribute("cartbean");
+        CartBean cartBean = (CartBean) session.getAttribute("cartBean");
         ProductPTO productPTO = cartBean.get(productId);
         if (productPTO == null) {
             return CART_VIEW_NAME;
