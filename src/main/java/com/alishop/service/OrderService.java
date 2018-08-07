@@ -1,25 +1,25 @@
 package com.alishop.service;
 
 
-import com.alishop.dto.OrderDTO;
-import com.alishop.dto.OrderDetailDTO;
+import com.alishop.dto.AccountDTO;
+import com.alishop.entity.Order;
 import com.alishop.entity.OrderDetail;
 
 import java.util.List;
 
 public interface OrderService {
 
-    List<OrderDTO> getOrders(int page, int size);
+    List<Order> getOrders(int page, int size);
 
-    OrderDTO getOrder(int id);
+    Order getOrder(int id);
 
-    OrderDTO saveOrder(OrderDTO orderDTO);
+    Order saveOrder(Order orderDTO, String clientUsername);
 
-    boolean updateOrder(OrderDTO order, int id);
+    Order updateOrder(Order order, int id);
 
     void deleteOrder(int id);
 
-    boolean saveOrderDetail(OrderDetailDTO orderDetailDTO);
+    OrderDetail saveOrderDetail(int orderId,int productId, int quantity);
 
 
 }

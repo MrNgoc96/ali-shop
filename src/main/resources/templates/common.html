@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" th:href="@{/images/logo.png}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
           crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
     <link rel="stylesheet" th:href="@{/css/Style.css}" />
-    <link rel="stylesheet" th:href="@{/css/dialog-utils.css}" />
+    <link rel="stylesheet" th:href="@{/css/dialog-utils.css}"/>
     <title>Ali Shop</title>
 </head>
 <body>
@@ -56,7 +57,8 @@
                     </div>
 
                     <div class="Login">
-                        <a th:href="@{/login}" type="button" class="btn btn-success">Đăng nhập/ Đăng ký</a>
+                        <a th:href="@{/login}" type="button" class="btn btn-success"
+                           th:if="${session.currentUser == null}">Đăng nhập/ Đăng ký</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +72,6 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -100,19 +101,26 @@
                     </li>
                 </ul>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <form action="search" class="navbar-form navbar-left" role="search">
+                <ul class="nav navbar-nav" >
+                    <form action="search" class="navbar-form" role="search" style="padding-right: 20px">
                         <div class="form-group">
                             <input type="text" class="form-control" name="key" placeholder="Tìm kiếm">
                             <button type="submit" class="btn btn-default">
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>
-                        <a th:href="@{/cart}">
-                            <i class="cart fas fa-cart-plus"></i>
-                        </a>
                     </form>
                 </ul>
+                <div th:if="${session.currentUser != null}" class="nav navbar-nav navbar-right" style="margin-top:0.5%">
+                    <button class="btn btn-danger btn-lg dropdown-toggle" type="button" data-toggle="dropdown"><i
+                            class="fas fa-user"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" th:text="${'Chào mừng '+ session.currentUser.name}">Thông tin cá nhân</a></li>
+                        <li><a href="#">Thông tin cá nhân</a></li>
+                        <li><a href="#">Đơn hàng của bạn</a></li>
+                        <li><a th:href="@{/logout}">Đăng xuất</a></li>
+                    </ul>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -120,9 +128,10 @@
 </div>
 
 <div id="cart" th:fragment="cart" th:width="product">
-    <a th:href="@{/cart}" >
+    <a th:href="@{/cart}">
         <img alt="" th:src="@{/images/shopping-cart.jpg}" width="60px" height="60px">
-        <span id="shop-item-count" class="badge" th:text="${session.cartBean != null ? session.cartBean.numberItems : 0}"></span>
+        <span id="shop-item-count" class="badge"
+              th:text="${session.cartBean != null ? session.cartBean.numberItems : 0}"></span>
     </a>
 </div>
 
@@ -236,11 +245,11 @@
     <input type="hidden" id="message" th:value="${message}">
     <script th:if="${!#strings.isEmpty(message)}">
         let message = $('#message').val();
-        showPopup('Thông báo',message);
+        showPopup('Thông báo', message);
     </script>
 </footer>
 
-<div th:fragment="product" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  >
+<div th:fragment="product" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <div class="thumbnail">
         <a th:href="@{'products/'+ ${product.id}}">
             <img th:src="${product.image}" alt="images" style="width:100%;height: 300px;">

@@ -1,0 +1,29 @@
+tr,td,th{
+    border: 2px solid gray;
+}
+.table>thead>tr>th{
+    border-bottom: none;
+}
+.txt{
+    width: 100%;
+    line-height: 2;
+}
+select{
+    height: 34px;
+    width: 100%;
+}
+.searchproduct{
+    padding: 20px 0;
+}
+.content{
+    min-width: 100vh;
+    min-height: 100vh;
+}
+.table thead th{
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+.table tr td{
+    text-align: center !important;
+    vertical-align: middle !important;
+}

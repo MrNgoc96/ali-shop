@@ -3,8 +3,8 @@ package com.alishop.controller;
 import com.alishop.cartbean.CartBean;
 import com.alishop.cartbean.ProductPTO;
 import com.alishop.dto.AccountDTO;
-import com.alishop.dto.OrderDTO;
-import com.alishop.dto.OrderDetailDTO;
+import com.alishop.entity.Order;
+import com.alishop.entity.OrderDetail;
 import com.alishop.service.AccountService;
 import com.alishop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class PaymentController {
     AccountService accountService;
 
     @GetMapping
-    public String showPaymentPage(HttpSession session,RedirectAttributes ra) {
+    public String showPaymentPage(HttpSession session, RedirectAttributes ra) {
         CartBean cartBean = (CartBean) session.getAttribute("cartBean");
         if (cartBean == null || cartBean.size() < 1) {
             ra.addFlashAttribute("message", "Giỏ hàng của bạn đang rỗng, hãy tiếp tục mua hàng đi nào !");
@@ -57,22 +57,20 @@ public class PaymentController {
             accountDTO = accountService.saveAccount(accountDTO);
         }
 
-        OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setAddress(address);
-        orderDTO.setOrderDate(new Date());
-        orderDTO.setUsername(accountDTO.getUsername());
-        orderDTO.setStatus("Đang đặt hàng");
-        orderDTO = orderService.saveOrder(orderDTO);
+        Order order = new Order();
+        order.setAddress(address);
+        order.setOrderDate(new Date());
+        order.setStatus("Đang đặt hàng");
+        order = orderService.saveOrder(order, accountDTO.getUsername());
 
         for (Map.Entry<Integer, ProductPTO> entry : cartBean.entrySet()) {
             int productId = entry.getValue().getProduct().getId();
-            int orderId = orderDTO.getId();
+            int orderId = order.getId();
             int quantity = entry.getValue().getQuantity();
-            OrderDetailDTO od = new OrderDetailDTO(orderId, productId, quantity);
-            orderService.saveOrderDetail(od);
+            orderService.saveOrderDetail(orderId,productId,quantity);
         }
 
-        orderService.saveOrder(orderDTO);
+        session.setAttribute("cartBean",null);
         ra.addFlashAttribute("message", "Chúc mừng bạn vừa thực hiện đặt hàng thành công, chúng tôi sẽ sớm giao hàng đến cho bạn !");
         return "redirect:home";
     }

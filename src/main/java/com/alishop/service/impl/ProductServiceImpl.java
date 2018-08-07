@@ -136,15 +136,15 @@ public class ProductServiceImpl implements ProductService {
                 list.remove(i);
             }
         }
-        StringBuilder imagelink = new StringBuilder();
+        StringBuilder imageLink = new StringBuilder();
         for (String productImg : list) {
 
             if (!productImg.equals("") && !productImg.equals("resources/images/default-img.svg")) {
-                imagelink.append(productImg + ";");
+                imageLink.append(productImg + ";");
             }
 
         }
-        return imagelink.toString();
+        return imageLink.toString();
     }
 
     public void removeImage(ServletContext context, String imgLink) {

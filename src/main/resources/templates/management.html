@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Ali Shop</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+
+    <link th:href="@{/css/AdminLTE.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/_all-skins.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/management.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body class="skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><img th:src="@{/images/logo.png}"></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><img th:src="@{/images/logo.png}"></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                    </li>>
+                    <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img th:src="@{/images/admin.png}" class="img-circle" alt="User Image"/>
+                </div>
+                <div class="pull-left info">
+                    <p th:text="${session.currentUser.name}"></p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="header">MAIN NAVIGATION</li>
+                <li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i><span>Trang chủ</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                <li><a href="index.html"><i class="fa fa-list"></i> Quản lý sản phẩm</a></li>
+                </li>
+                <li class="treeview">
+                <li><a href="index2.html"><i class="fa fa-list-alt"></i> Quản lý đơn hàng</a></li>
+                </li>
+                <li><a th:href="@{/logout}"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
+                </li>
+            </ul>
+
+        </section>
+
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <section class="content" th:if="${products != null}">
+            <h2 style="text-align: center">Quản lý sản phẩm</h2>
+            <div class="searchproduct row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <select class="form-control">
+                        <option value="volvo">Tên</option>
+                        <option value="saab">ID</option>
+                        <option value="mercedes">Giá</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <form>
+                        <input class="form-control" type="text" name="txt">
+                    </form>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search-plus"></i> Tìm kiếm</button>
+                </div>
+
+                <div class="col-md-2">
+                    <select name="page" id="selectPage">
+                        <option th:each="p : ${#numbers.sequence(1,100)}" th:if="${p <= totalPages}" th:value="${p}"
+                        th:text="${'Trang '+p}" th:selected="(${p == param.page} ? true : false)"></option>
+                    </select>
+                </div>
+
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <button type="button" class="btn btn-success"><i class="fa fa-plus-square"></i> Thêm sản phẩm</button>
+                </div>
+            </div>
+            <table class="table table-dark">
+                <thead style="background: #3c8dbc;color: whitesmoke;text-align: center">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Chức năng</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="product : ${products}">
+                    <th scope="row" th:text="${product.id}"></th>
+                    <td style="width: 100px"><img th:src="${product.image}" width="100%"></td>
+                    <td style="font-weight: bold"  th:text="${product.name}">Áo adidas</td>
+                    <td style="font-weight: bold;color: red;"  th:text="${#numbers.formatDecimal(product.price,0,'COMMA', 0,'POINT')}+ ' đ'">@mdo</td>
+                    <td style="width: 60vh"><p th:text="${product.detail}"></p></td>
+                    <td>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-edit"></i> Sửa</button>
+                        <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section><!-- /.content -->
+        <section class="content" th:if="${products==null}">
+            <h2 style="text-align: center">Quản lý sản phẩm</h2>
+            <div class="searchproduct row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <select class="form-control">
+                        <option value="volvo">Tên</option>
+                        <option value="saab">ID</option>
+                        <option value="mercedes">Giá</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <form>
+                        <input class="form-control" type="text" name="txt">
+                    </form>
+                </div>
+
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search-plus"></i> Tìm kiếm</button>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <button type="button" class="btn btn-success"><i class="fa fa-plus-square"></i> Thêm sản phẩm</button>
+                </div>
+            </div>
+            <table class="table table-dark">
+                <thead style="background: #3c8dbc;color: whitesmoke;">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Chức năng</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Áo adidas</td>
+                    <td>100000</td>
+                    <td>@mdo</td>
+                    <td>Áo adidas nhập khẩu</td>
+                    <td>
+                        <button type="button" class="btn btn-danger"><i class="fa fa-edit"></i> Sửa</button>
+                        <button type="button" class="btn btn-success"><i class="fa fa-trash"></i> Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+</div>
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/dialog-utils.js}"></script>
+<script th:src="@{/js/management.js}"></script>
+</body>
+</html>

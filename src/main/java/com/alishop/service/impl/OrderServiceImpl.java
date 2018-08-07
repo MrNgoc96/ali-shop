@@ -1,8 +1,7 @@
 package com.alishop.service.impl;
 
 import com.alishop.bases.TransformUtils;
-import com.alishop.dto.OrderDTO;
-import com.alishop.dto.OrderDetailDTO;
+import com.alishop.dto.AccountDTO;
 import com.alishop.entity.Account;
 import com.alishop.entity.Order;
 import com.alishop.entity.OrderDetail;
@@ -34,34 +33,28 @@ public class OrderServiceImpl implements OrderService {
     ProductRepository productRepository;
 
     @Autowired
-    TransformUtils<Order, OrderDTO> transformUtils;
+    TransformUtils<Order, Order> transformUtils;
 
     @Override
-    public List<OrderDTO> getOrders(int page, int size) {
+    public List<Order> getOrders(int page, int size) {
         return null;
     }
 
     @Override
-    public OrderDTO getOrder(int id) {
-        Order order = orderRepository.getOne(id);
-        return transform(order);
+    public Order getOrder(int id) {
+        return orderRepository.getOne(id);
     }
 
     @Override
-    public OrderDTO saveOrder(OrderDTO orderDTO) {
-        Order order = transformUtils.transformReverse(orderDTO, Order.class);
-        Account account = accountRepository.getOne(orderDTO.getUsername());
+    public Order saveOrder(Order order, String clientUsername) {
+        Account account = accountRepository.getOne(clientUsername);
         order.setAccount(account);
-        return transformUtils.transform(orderRepository.save(order), OrderDTO.class);
+        return orderRepository.save(order);
     }
 
     @Override
-    public boolean updateOrder(OrderDTO orderDTO, int id) {
-        if (!orderRepository.existsById(id)) return false;
-        Order order = transformUtils.transformReverse(orderDTO, Order.class);
-        Account account = accountRepository.getOne(orderDTO.getUsername());
-        order.setAccount(account);
-        return orderRepository.save(order) != null;
+    public Order updateOrder(Order orderDTO, int id) {
+        return orderRepository.save(orderDTO);
     }
 
     @Override
@@ -70,18 +63,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public boolean saveOrderDetail(OrderDetailDTO oddt) {
-        Order order = orderRepository.getOne(oddt.getOrderId());
-        Product product = productRepository.getOne(oddt.getProductId());
-        OrderDetail orderDetail = new OrderDetail(order, product, oddt.getQuantity());
-        return orderDetailRepository.save(orderDetail) != null;
-    }
-
-
-    private OrderDTO transform(Order order) {
-        OrderDTO orderDTO = transformUtils.transform(order, OrderDTO.class);
-        orderDTO.setUsername(order.getAccount().getUsername());
-        return orderDTO;
+    public OrderDetail saveOrderDetail(int orderId, int productId, int quantity) {
+        Order order = getOrder(orderId);
+        Product product = productRepository.getOne(productId);
+        OrderDetail orderDetail = new OrderDetail(order, product, quantity);
+        return orderDetailRepository.save(orderDetail);
     }
 
 
